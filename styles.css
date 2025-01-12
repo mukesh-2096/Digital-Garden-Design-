@@ -1,0 +1,554 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home-page {
+    background-image: url('bg-3.jpg');
+    background-size: cover; /* Makes the background image cover the entire page */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh; /* Makes the body take full viewport height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    flex: 1;
+}
+
+header nav {
+    flex: 2;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex; /* Ensure all links are displayed inline */
+    justify-content: flex-end; /* Align the navigation items to the right */
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    background: url('garden-hero.jpg') no-repeat center center/cover;
+    height: 100%;
+    text-align: center;
+    color: black;
+    padding-top: 20%;
+    
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+/* 
+.cta-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+} */
+/* 
+.cta-btn {
+    background-color: #34a0a4;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+} */
+
+/* .cta-btn:hover {
+    background-color: #2d6a4f;
+} */
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2d6a4f;
+    color: white;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Sign-In Section */
+.signin {
+    background-color: rgb(222, 240, 226);
+    padding: 100px;
+    margin: 50px auto;
+    /* max-width: 400px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.signin h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2d6a4f; 
+}
+
+.signin form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signin form label {
+    font-size: 14px;
+    color: #333;
+}
+
+.signin form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signin form button {
+    padding: 10px;
+    background-color: #34a0a4;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signin form button:hover {
+    background-color: #2d6a4f;
+}
+
+.signin p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.signin p a {
+    color: #34a0a4;
+    text-decoration: none;
+}
+
+.signin p a:hover {
+    text-decoration: underline;
+}
+
+/* Sign-Up Section */
+.signup {
+    background-color: rgb(222, 240, 226); /* Semi-transparent white background */
+    padding: 100px;
+    margin: 50px auto;
+    /* max-width: 400px; */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for elevation */
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.signup h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2d6a4f; /* Use brand color for heading */
+}
+
+.signup form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signup form label {
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.signup form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup form button {
+    padding: 10px;
+    background-color: #34a0a4;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup form button:hover {
+    background-color: #2d6a4f;
+}
+
+.signup p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.signup p a {
+    color: #34a0a4;
+    text-decoration: none;
+}
+
+.signup p a:hover {
+    text-decoration: underline;
+}
+
+/* General Styles for Header, Footer, and Dropdown */
+header {
+    background-color: #2d6a4f;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2d6a4f;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+
+
+
+/* Customize Section */
+.customize {
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    background: rgb(222, 240, 226);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center; /* Center align text inside the section */
+    margin: auto; /* Center the form */
+}
+
+.customize h2 {
+    font-size: 28px;
+    color: #2d6a4f;
+    margin-bottom: 20px;
+}
+
+.customize form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    text-align: left; /* Align form labels to the left */
+}
+
+.customize form select,
+.customize form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.customize form #features label {
+    display: inline-block;
+    margin: 5px 0;
+}
+
+.customize form button {
+    width: 100%;
+    background-color: #34a0a4;
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.customize form button:hover {
+    background-color: #2d6a4f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2d6a4f;
+    color: white;
+    width: 100%;
+}
+
+
+/* Contact Section */
+.contact {
+    padding: 40px 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color:rgb(222, 240, 226);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 32px;
+    color: #2d6a4f;
+    margin-bottom: 30px;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact form label {
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact form textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.contact form button {
+    background-color: #34a0a4;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #2d6a4f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #2d6a4f;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.portfolio h2 {
+    font-size: 32px;
+    color: #2d6a4f;
+    margin-bottom: 40px;
+}
+
+/* Individual Project Box */
+.project-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #bebbbb;
+    border: 1px solid #ccc; /* Add border to make the box visible */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.project-box:hover {
+    transform: scale(1.05); /* Slightly scale up the box on hover */
+}
+
+/* Image inside the project box */
+.project-img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Project Details */
+.project-details {
+    text-align: left;
+}
+
+.project-details h3 {
+    font-size: 24px;
+    color: #2d6a4f;
+    margin-bottom: 10px;
+}
+
+.project-details p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .project-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-details {
+        text-align: center;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Design - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body class="home-page" onload="updateNavigation()">
+
+    <header>
+        <div class="logo">
+            <h1>GardenDesign</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <div class="dropdown-content">
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="customize.html">Customize</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="signInLink"><a href="signin.html">Sign In</a></li>
+                <li id="signUpLink"><a href="signup.html">Sign Up</a></li>
+                <li id="logoutLink" style="display: none;"><a href="#" onclick="handleLogout()">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to Garden Design</h1>
+        <p>Creating your dream garden with expertise and passion.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 GardenDesign | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
